@@ -23,6 +23,8 @@ module.exports = {
     '@typescript-eslint/no-confusing-void-expression': 'off',
     '@typescript-eslint/indent': 'off',
     '@typescript-eslint/member-delimiter-style': 'off',
-    'eol-last': 'off'
+    'eol-last': 'off',
+    '@typescript-eslint/no-unused-vars': 'off',
+    'react/prop-types': 'off'
   }
 }

@@ -1,8 +1,11 @@
 import { useEffect, useState } from 'react'
 import './App.css'
+import { UsersList } from './components/UsersList'
+import { type User } from './types'
 
 function App() {
-  const [users, setUsers] = useState([])
+  // eslint-disable-next-line @typescript-eslint/no-unused-vars
+  const [users, setUsers] = useState<User[]>([])
   useEffect(() => {
     fetch('https://randomuser.me/api/?results=100')
       .then(async r => await r.json())
@@ -15,9 +18,7 @@ function App() {
   return (
     <div className='App'>
       <h1>Tech Assestment</h1>
-      {
-        JSON.stringify(users)
-      }
+      <UsersList users={users} />
     </div>
   )
 }
