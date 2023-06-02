@@ -8,12 +8,13 @@ function App() {
   const [showColor, setShowColor] = useState<boolean>(false)
   const [sort, setSort] = useState<boolean>(false)
 
-  const toogleColor = () => {
-    setShowColor(!showColor)
-  }
+  const toogleColor = () => setShowColor(!showColor)
 
-  const toogleSort = () => {
-    setSort(prevState => !prevState)
+  const toogleSort = () => setSort(prevState => !prevState)
+
+  const handleDelete = (email: string) => {
+    const filteredUsers = users.filter((user) => user.email !== email)
+    setUsers(filteredUsers)
   }
 
   useEffect(() => {
@@ -40,7 +41,7 @@ function App() {
         <button onClick={toogleSort}>{sort ? 'Do not sort by Country' : 'Sort by Country'}</button>
       </header>
       <main>
-        <UsersList showColor={showColor} users={sortedUsers} />
+        <UsersList deleteUser={handleDelete} showColor={showColor} users={sortedUsers} />
       </main>
     </div>
   )
