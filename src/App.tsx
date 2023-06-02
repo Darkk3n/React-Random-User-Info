@@ -33,7 +33,7 @@ function App() {
         console.log(err))
   }, [])
 
-  const filteredUsers = typeof filterCountry === 'string' && filterCountry.length > 0
+  const filteredUsers = filterCountry !== null && filterCountry.length > 0
     ? users.filter(user => user.location.country.toLocaleLowerCase().includes(filterCountry.toLowerCase()))
     : users
 
