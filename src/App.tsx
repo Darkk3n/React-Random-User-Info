@@ -33,13 +33,12 @@ function App() {
         console.log(err))
   }, [])
 
-  const filteredUsers = useMemo(() => filterCountry !== null && filterCountry.length > 0
+  const filteredUsers = useMemo<User[]>(() => filterCountry !== null && filterCountry.length > 0
     ? users.filter(user => user.location.country.toLocaleLowerCase().includes(filterCountry.toLowerCase()))
     : users
     , [users, filterCountry])
 
-
-  const sortedUsers = useMemo(() => {
+  const sortedUsers = useMemo<User[]>(() => {
     return sort
       ? filteredUsers.toSorted((a, b) => a.location.country.localeCompare(b.location.country))
       : filteredUsers
