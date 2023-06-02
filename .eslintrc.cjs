@@ -26,6 +26,7 @@ module.exports = {
     'eol-last': 'off',
     '@typescript-eslint/no-unused-vars': 'off',
     'react/prop-types': 'off',
-    '@typescript-eslint/method-signature-style': 'off'
+    '@typescript-eslint/method-signature-style': 'off',
+    '@typescript-eslint/semi': 'off'
   }
 }
