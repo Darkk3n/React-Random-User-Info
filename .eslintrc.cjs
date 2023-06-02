@@ -25,6 +25,7 @@ module.exports = {
     '@typescript-eslint/member-delimiter-style': 'off',
     'eol-last': 'off',
     '@typescript-eslint/no-unused-vars': 'off',
-    'react/prop-types': 'off'
+    'react/prop-types': 'off',
+    '@typescript-eslint/method-signature-style': 'off'
   }
 }
